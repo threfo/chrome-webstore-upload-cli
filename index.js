@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+const {
+    bootstrap
+} = require('global-agent');
 
 const ora = require('ora');
 const path = require('path');
@@ -12,6 +15,8 @@ const {
     exitWithPublishStatus,
     validateInput
 } = require('./util');
+
+bootstrap();
 
 const cli = meow(`
     Usage
